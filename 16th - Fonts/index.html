@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonts in CSS</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+      p {
+        font-family: "Courier New", Courier, monospace;
+        font-style: italic;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      h1 {
+        font-family: anton;
+        text-align: center;
+      }
+      .expand {
+        letter-spacing: 7px;
+      }
+      h2 {
+        text-transform: capitalize;
+        font-family: "Playwrite IT Moderna", cursive;
+        text-decoration: dashed underline;
+        text-decoration-color: red;
+        /*text-indent: 50px;*/
+      }
+      .box {
+        padding: 10px;
+        margin: 0px;
+      }
+      .lorem {
+        border: 2px solid red;
+        width: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Fonts</h1>
+      <h2>About Fonts</h2>
+      <p class="expand">This is a program on fonts</p>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        reiciendis maxime iure est enim quasi commodi, rerum ducimus a
+        voluptatibus similique quod maiores voluptatem architecto possimus ad
+        voluptas itaque, iste asperiores placeat quibusdam soluta. Eum error
+        hic, aliquam exercitationem temporibus numquam explicabo veritatis illum
+        dolorum.
+      </p>
+    </div>
+  </body>
+</html>
