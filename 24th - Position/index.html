@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        padding: 3px;
+        border: 2px solid black;
+        margin: 0px;
+      }
+      .box1 {
+        display: flex;
+        justify-content: flex-end; /* Align ul to the right */
+        align-items: center;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 1000; /* Ensure it stays above other content */
+      }
+      .box1 ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 2px;
+      }
+      .box1 li {
+        margin: 0 20px;
+      }
+      .box2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 1000; /* Ensure it stays above other content */
+      }
+      .box2 .left-content,
+      .box2 .right-content {
+        margin: 0 10px;
+      }
+      .box3 {
+        background-color: red;
+        height: 400px;
+        margin-top: 50px;
+        color: aliceblue;
+        overflow: auto;
+        /* Add margin to push content below the fixed box1 */
+      }
+      .box4 {
+        background-color: blue;
+        height: 400px;
+        /* Add margin to push content above the fixed box2 */
+      }
+      .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Adjust for box1 and box2 height */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ul>
+    </div>
+    <div class="box box2">
+      <div class="left-content">Manav Verma</div>
+      <div class="right-content">XYZ Limited</div>
+    </div>
+    <div class="parent">
+      <div class="box box3">
+        <div class="p1">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis,
+            dolorem nisi quasi repellat tenetur iusto qui consequuntur
+            laudantium dolor sunt officiis rerum impedit quidem odio modi nobis
+            reiciendis facere nesciunt! Officiis voluptas sequi numquam magnam
+            fuga dolorem exercitationem quisquam assumenda. Numquam molestiae
+            aliquam, voluptates necessitatibus recusandae natus quis nostrum
+            quibusdam exercitationem quod. Eligendi aut a provident. Debitis id
+            hic, illum maxime laborum illo perferendis est repellat dolorum
+            dolorem similique quam in dolor praesentium numquam facere error
+            voluptatem fugiat laboriosam! Soluta alias officiis cupiditate,
+            itaque praesentium quaerat iusto illo, debitis vero sequi vitae
+            consequuntur, inventore consectetur commodi dolorum fugit autem
+            voluptatum eum saepe excepturi. Illum repellendus fuga voluptatibus
+            vitae harum blanditiis deleniti sunt ab eligendi quae dolorum, error
+            esse incidunt distinctio quo! Ea iusto dignissimos quidem molestias
+            est minus similique necessitatibus nobis eligendi, quis maxime
+            cupiditate itaque cum omnis error non provident fugiat ratione nemo
+            animi in maiores veritatis accusamus. Necessitatibus, ea obcaecati.
+            At, excepturi laborum sed nobis error dolorem ipsum maiores minima
+            debitis inventore perferendis voluptatibus doloribus incidunt
+            aperiam doloremque praesentium tempora corporis soluta magnam sunt
+            harum illo in laudantium. Suscipit repellat ratione alias distinctio
+            eligendi aliquid fugit ad, doloribus dolor odio perspiciatis eum rem
+            reiciendis quae nostrum modi cupiditate nemo quidem veritatis ea
+            minima. Consectetur, modi mollitia officiis nesciunt deleniti aut
+            minima maiores ipsa corporis quibusdam voluptates esse, vitae magni
+            maxime, eveniet natus obcaecati consequuntur aspernatur iusto libero
+            unde sunt quae voluptatum suscipit. Fuga ipsa consequuntur veniam
+            minima dignissimos enim, voluptates libero, debitis magnam, odio
+            dolores repudiandae. Ea quasi debitis ut nam repellat nulla
+            provident ad esse iste quas pariatur at eaque in, deserunt officia
+            voluptas architecto praesentium tempore unde consectetur alias
+            blanditiis omnis! Dignissimos, quis eveniet accusamus laborum
+            deleniti ducimus sit animi soluta vero, asperiores consequatur
+            porro. Aut qui delectus culpa molestias quos ad iste recusandae sint
+            quo libero dicta debitis earum id dolore cum nobis, veniam,
+            suscipit, fuga repellendus. Quisquam error doloribus maiores,
+            sapiente aliquid nihil quod magni quam adipisci earum quasi
+            laudantium expedita laborum nisi assumenda ipsa necessitatibus vel
+            ab, odio ipsum cum harum labore blanditiis possimus. Praesentium est
+            alias impedit aspernatur voluptates dolorum sit quibusdam animi
+            dicta molestias maxime nobis nihil qui eveniet obcaecati laboriosam
+            libero cum, repellendus ad illum cumque, porro inventore
+            voluptatibus! Animi, dignissimos suscipit earum architecto officiis
+            a esse non voluptatum quas debitis iure natus nisi voluptas! Illum
+            odit et aliquam odio. Id non laborum quod consectetur mollitia,
+            quasi quia illo itaque. Deleniti explicabo est, dignissimos quisquam
+            excepturi veniam dolores mollitia molestias quidem esse rerum
+            perferendis delectus quae aliquam, ratione a temporibus. Repellat,
+            harum error. Dignissimos non laudantium pariatur exercitationem
+            natus, officiis, optio eligendi vitae dolorum deleniti repellendus
+            ipsa eum temporibus consequatur ullam sunt, laboriosam ipsam
+            suscipit. Molestias, natus necessitatibus! Impedit nulla deleniti
+            modi aut illum tempora omnis, corporis libero, tenetur optio iste,
+            beatae deserunt mollitia nisi nihil harum alias quam numquam dicta
+            consectetur amet. Ipsum praesentium, excepturi molestias
+            reprehenderit consequuntur officiis animi, veritatis quo quibusdam
+            voluptatibus veniam similique commodi corrupti consectetur a, vero
+            itaque accusantium ullam. Mollitia adipisci sint doloribus molestiae
+            eum odio praesentium delectus iure recusandae illo dolorem,
+            consequuntur perferendis minima eos temporibus numquam aut rerum
+            nesciunt voluptate voluptates quo! In, sint. Atque sit placeat ex
+            minima, magni natus possimus sapiente eos consequuntur quibusdam
+            perspiciatis. Nihil ut, doloremque veritatis corporis excepturi
+            quibusdam accusamus autem quos rerum perspiciatis commodi itaque
+            distinctio animi sint, debitis molestiae quod iusto? Nemo minus
+            optio aspernatur consequatur sit itaque modi mollitia fugiat quo.
+          </p>
+        </div>
+      </div>
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>
