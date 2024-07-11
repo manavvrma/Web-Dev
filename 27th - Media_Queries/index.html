@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css media queries</title>
+    <style>
+      body {
+        background-color: red;
+      }
+
+      .boxes {
+        display: flex;
+      }
+
+      .box {
+        width: 3447px;
+        height: 344px;
+        background-color: rgb(159, 222, 159);
+        padding: 3px;
+        margin: 3px;
+      }
+      @media only screen and (max-width: 455px) {
+        body {
+          background-color: blue;
+        }
+        .boxes {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit a
+      recusandae.
+    </div>
+
+    <div class="boxes">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
