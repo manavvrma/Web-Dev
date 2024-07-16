@@ -3,15 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CSS Transform</title>
     <style>
       .box {
+        height: 50px;
+        width: 50px;
+        background-color: lightblue;
+        border: 2px solid black;
+        /*transform: rotate(0.25turn);
+        transform: rotatez(50deg);
+        transform: translate(50px, 50px); 
+        transform: skewX(30deg);
+        transform: scale(1.5);*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 100vh;
+        height: 80vh;
+        border: 2px solid rgb(248, 12, 12);
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="box"></div>
+      <div class="box">box</div>
     </div>
   </body>
 </html>

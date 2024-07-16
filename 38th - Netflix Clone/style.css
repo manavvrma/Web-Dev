@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url("assets/images/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+
+.main .box {
+  height: 100%;
+  width: 100%;
+  opacity: 0.55;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  height: 62px;
+  max-width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 12px;
+}
+
+nav img {
+  color: red;
+  width: 140px;
+  position: relative;
+  z-index: 10;
+}
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.text1 {
+  color: white;
+  height: calc(100% - 86px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  padding: 0 23px;
+  position: relative;
+  text-align: center;
+}
+
+.text1 > :nth-child(1) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+}
+
+.text1 > :nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding: 0 0 15px 0;
+  text-align: center;
+}
+
+.text1 > :nth-child(3) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  padding: 0 0 5px 0;
+  text-align: center;
+}
+
+.line {
+  height: 7px;
+  background-color: rgb(42, 42, 42);
+}
+
+.box2 {
+  display: flex;
+  padding: 10px;
+  max-width: 70vw;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.text2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.text2 > :nth-child(1) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.text2 > :nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding: 0 0 15px 0;
+}
+
+.box2_media {
+  position: relative;
+}
+
+.box2_media img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
+}
+
+.box2_media video {
+  position: absolute;
+  top: 87px;
+  right: 78px;
+  width: 403px;
+}
