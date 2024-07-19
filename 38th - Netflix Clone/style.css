@@ -16,16 +16,40 @@ body {
   background-repeat: no-repeat;
   height: 70vh;
   position: relative;
+  z-index: 0;
 }
 
 .main .box {
   height: 100%;
   width: 100%;
-  opacity: 0.55;
+  opacity: 0.6;
   background-color: black;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+
+.main .box::before,
+.main .box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 2;
+}
+
+.main .box::before {
+  top: 0;
+}
+
+.main .box::after {
+  bottom: 0;
 }
 
 nav {
@@ -60,6 +84,7 @@ nav button {
   padding: 0 23px;
   position: relative;
   text-align: center;
+  z-index: 4;
 }
 
 .text1 > :nth-child(1) {
@@ -84,7 +109,7 @@ nav button {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  padding: 0 0 5px 0;
+  padding: 0 0 15px 0;
   text-align: center;
 }
 
@@ -95,7 +120,7 @@ nav button {
 
 .box2 {
   display: flex;
-  padding: 10px;
+  padding: 45px;
   max-width: 70vw;
   margin: auto;
   justify-content: center;
@@ -144,4 +169,120 @@ nav button {
   top: 87px;
   right: 78px;
   width: 403px;
+}
+
+.topb {
+  display: flex;
+  gap: 8px;
+}
+
+.lang {
+  height: 28px;
+  padding: 0px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 3px;
+  background-color: black;
+
+  color: white;
+  border-radius: 3px;
+  border: 0.05px solid grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bred {
+  height: 28px;
+  padding: 2px;
+  width: 66px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.bred2 {
+  height: 55px;
+  padding: 0px;
+  width: 178px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 24px;
+  gap: 2px;
+}
+
+.email1 {
+  display: flex;
+  gap: 8px;
+}
+
+.email2 {
+  padding: 13px;
+  width: 318px;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  gap: 3px;
+  background-color: black;
+
+  color: white;
+  border-radius: 3px;
+  border: 0.05px solid grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav img {
+    width: 100px;
+  }
+  .text1 {
+    padding: 0 10px;
+  }
+  .text1 > :nth-child(1) {
+    font-size: 30px;
+  }
+  .text1 > :nth-child(2) {
+    font-size: 18px;
+  }
+  .text1 > :nth-child(3) {
+    font-size: 14px;
+  }
+  .box2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .box2_media img,
+  .box2_media video {
+    width: 100%;
+    position: static;
+  }
+  .email2 {
+    width: 100%;
+  }
+  .bred2 {
+    width: 100%;
+    font-size: 20px;
+  }
 }
