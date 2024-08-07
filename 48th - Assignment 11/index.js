@@ -9,8 +9,4 @@ function factorial(number) {
   console.log(c);
 }
 
-function facfor(number) {
-  let fac = 1;
-}
-
 factorial(a);
