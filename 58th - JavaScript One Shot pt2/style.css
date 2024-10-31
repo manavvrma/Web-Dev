@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #08aeae;
+  --secondary-color: #ff0000;
+  --text-color: #060000;
+  --background-color: #00ffff;
+  --button-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px;
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+}
+
+.heading2 {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  box-shadow: var(--button-shadow);
+  transition: color var(--transition-speed);
+}
+
+h1:hover {
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--secondary-color);
+  padding: 12px 18px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  transition: background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 8px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+}
