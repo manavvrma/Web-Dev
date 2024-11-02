@@ -37,3 +37,35 @@ console.log(div1);
 
 let id = div1.getAttribute("id");
 console.log(id);
+
+// events
+
+let btn = document.querySelector("#btn2");
+
+btn.addEventListener("click", () => {
+  console.log("Button clicked 1");
+});
+
+btn.addEventListener("click", () => {
+  console.log("Button clicked 2");
+});
+
+const handler = () => {
+  console.log("Button clicked 3");
+};
+
+btn.addEventListener("click", handler);
+
+btn.addEventListener("click", () => {
+  console.log("Button clicked 4");
+});
+
+btn.removeEventListener("click", handler);
+
+// practice change mode light or dark
+
+let btn3 = document.querySelector("#btn3");
+
+btn3.addEventListener("click", () => {
+  console.log("tried to change color");
+});
