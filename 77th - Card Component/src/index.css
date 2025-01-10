@@ -31,3 +31,12 @@
   margin-top: 10px; /* Adds spacing above the paragraph */
   text-align: justify; /* Optional: Makes text alignment consistent */
 }
+
+.button {
+  background-color: burlywood;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
