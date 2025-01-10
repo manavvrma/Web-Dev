@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid black;
+  border-radius: 6.6px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visuals */
+}
+
+.card .card-img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%; /* Ensures a circular image */
+  border: 1px solid rgba(0, 0, 0, 0.626);
+  margin-bottom: 10px; /* Adds spacing between image and text */
+}
+
+.card .card-title {
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px 0; /* Adjusts spacing for better readability */
+  color: brown;
+  font-weight: bold; /* Optional: Highlights the title */
+}
+
+.card .card-para {
+  font-family: "Courier New", Courier, monospace;
+  color: brown;
+  margin-top: 10px; /* Adds spacing above the paragraph */
+  text-align: justify; /* Optional: Makes text alignment consistent */
+}
