@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Revision</title>
+    <style>
+      /* Reset some default spacing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+        padding: 30px;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin-top: 20px;
+        color: #2c3e50;
+      }
+
+      button {
+        padding: 10px 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+
+      ol,
+      ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: white;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      table th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .card {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+      }
+
+      .card h4,
+      .card h5 {
+        color: #28a745;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 25px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 6px;
+        margin-top: 14px;
+        font-weight: bold;
+      }
+
+      form input[type="text"],
+      form input[type="password"],
+      form input[type="email"],
+      form input[type="date"],
+      form select,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      form input[type="radio"],
+      form input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      form textarea {
+        resize: vertical;
+      }
+
+      form button {
+        margin-top: 20px;
+      }
+
+      audio {
+        margin-top: 20px;
+      }
+
+      details {
+        margin-top: 20px;
+        background-color: #eef2f7;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .google {
+        text-align: center;
+        margin-top: 20%;
+      }
+
+      .logo {
+        width: 40%;
+        margin-bottom: 20px;
+      }
+
+      .search-bar {
+        width: 600px;
+        padding: 10px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        border-radius: 20px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+          0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .card,
+        form {
+          padding: 15px;
+        }
+
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="google">
+      <img
+        class="logo"
+        src="/intro-to-html/googlelogo_light_color_272x92dp.png"
+        alt="google logo"
+      />
+      <input
+        class="search-bar"
+        type="text"
+        placeholder="Search Google or type URL"
+      />
+    </div>
+    <br />
+    <br />
+    <button>Hello</button>
+    <p>
+      Welocme to the website. This is a simple HTML page to demonstrate basic
+      structure and elements.
+    </p>
+
+    Link to
+    <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+    <br />
+    <br />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+      alt="yoube logo"
+      width="50"
+    />
+
+    <h2>Steps to Make Tea</h2>
+    <ol>
+      <li>Boil water</li>
+      <li>Add tea leaves</li>
+      <li>Strain and serve</li>
+    </ol>
+    <h2>Best AI Tools:</h2>
+    <ul>
+      <li>Warp.dev</li>
+      <li>Cursor</li>
+      <li>WindSurf</li>
+    </ul>
+    <br />
+    <br />
+
+    <div class="card">
+      <h3>Nike running shoes</h3>
+
+      <h4>$34 - in stock</h4>
+      <h5>free shipping</h5>
+
+      <button>Add to Cart</button>
+      <button>Buy Now</button>
+    </div>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Manav</td>
+        <td>22</td>
+        <td>India</td>
+      </tr>
+      <tr>
+        <td>Rohaan</td>
+        <td>21</td>
+        <td>USA</td>
+      </tr>
+    </table>
+    <br />
+
+    <audio controls loop muted>
+      <source
+        src="/Travis Scott - FRANCHISE (Mike Dean Version) [prod.Slimey].mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+    <details>
+      <summary>More Info</summary>
+      <p>This is the hidden content.</p>
+    </details>
+
+    <form action="/submit.html" method="post">
+      <h2>Contact Me:</h2>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="user_name"
+        placeholder="Enter you Username"
+        required
+      /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="user_password"
+        placeholder="Enter Your Password"
+        required
+      /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="user_email" /><br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="user_dob" /><br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" />Male
+      <input type="radio" name="gender" value="female" />Female<br /><br />
+
+      <label>Skills:</label>
+      <input type="checkbox" name="skills" value="HTML" />HTML
+      <input type="checkbox" name="skills" value="CSS" />CSS<br /><br />
+
+      <label for="car">Choose a car:</label>
+      <select name="car" id="car">
+        <option value="audi">Audi</option>
+        <option value="audi">bmw</option>
+        <option value="audi">porche</option></select
+      ><br /><br />
+
+      <input
+        type="text"
+        placeholder="Type here..."
+        autocomplete="on"
+        autofocus
+      />
+
+      <label for="bio">Bio:</label><br />
+      <textarea name="bio" id="bio" rows="3" cols="30"></textarea><br />
+
+      <button type="submit">Send</button><br /><br />
+    </form>
+  </body>
+</html>
