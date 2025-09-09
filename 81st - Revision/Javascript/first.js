@@ -30,7 +30,6 @@
 // var a; //unintiallized, value not defined
 // var a = 9; // initialised , vaklue defined
 
-// variables are case sensitive gives refernece error
 var a = 1;
 var a = 3; //whatevers down will have priority
 var b = 2;
@@ -50,3 +49,31 @@ c = c + "hello" + "hello" + 2;
 console.log("c= ", a, b, c, d);
 c = d + "hello" + 3;
 console.log(a, b, c, d);
+
+// variables are case sensitive gives refernece error
+
+var thisIsAVariable = "variable";
+
+var sum = 10 + 1; // same with - , *, /
+
+//incrementing anf decremmenting
+
+var a = 5;
+
+a++; // a = a + 1;
+
+a--;
+
+var decimal = 0.65657;
+
+decimal = decimal + 0.000056 + 0.345345 - 0.00001;
+
+console.log(decimal);
+
+//remainder
+
+var r;
+
+r = 12 % 3;
+
+console.log(r);
