@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Units Demo</title>
+  <style>
+    html {
+      font-size: 62.5%; /* 1rem = 10px */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      height: 60px; /* px */
+      background: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.6rem; /* rem */
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh; /* vh */
+      width: 100vw; /* vw */
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 6vmin; /* responsive text */
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      font-size: 1.6rem; /* rem */
+      padding: 1em 2em; /* em */
+      border: none;
+      background: orange;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Square box */
+    .square {
+      margin-top: 5vh;
+      width: 20vmin; /* scales with screen */
+      height: 20vmin;
+      background: limegreen;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Mastering CSS Units 🚀</h1>
+    <button>Get Started</button>
+    <div class="square"></div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+    <style>
+      html {
+        font-size: 70%; /* base font size → makes rem useful - 10px */
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        height: 6rem; /* ✅ rem for consistent height - 60px*/
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 15%; /* ✅ % so it shrinks/grows with screen */
+        margin-left: 2.5rem;
+        font-size: 1.4rem; /* ✅ rem instead of px → scales with root font */
+      }
+
+      .navigation {
+        width: 40%; /* ✅ % → responsive nav size */
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.4rem; /* ✅ rem for consistent text size */
+      }
+
+      main {
+        padding: 6.1rem 1.5rem 1.5rem 1.5rem;
+        /* ✅ top padding in rem (accounts for fixed header), sides in rem */
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap; /* ✅ makes it wrap on small screens */
+      }
+
+      .article {
+        max-width: 13rem; /* ✅ % instead of px → responsive grid */
+        height: 0%;
+        background-color: rgb(172, 172, 172);
+        padding: 0; /* ✅ em so padding scales with text size */
+        border-radius: 0.5rem; /* ✅ rem → consistent rounded corners */
+        color: white;
+        margin-right: 1.25rem; /* ✅ rem instead of px */
+        margin-bottom: 1.25rem; /* ✅ add bottom spacing for wrapped rows */
+      }
+
+      .article-img {
+        width: 100%; /* ✅ responsive images inside article */
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem; /* ✅ rem */
+      }
+
+      .article-text {
+        padding: 0 1rem 1rem 1rem;
+      }
+
+      .footer {
+        height: 8vh; /* ✅ vh → footer always ~8% of screen height */
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem; /* ✅ rem for scalable font */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <div>LOGO</div>
+        <div>WEBPAGE</div>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#welcome">About</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main" id="welcome">
+      <section>
+        <h1>Welcome</h1>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          consectetur sit laboriosam nobis corrupti libero, cumque tenetur
+          exercitationem minus suscipit eos omnis quidem ea repellat dolorem,
+          odio error possimus tempore nisi cum reiciendis ullam quam rerum est.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi non
+          fugiat nulla quo quos, maxime debitis neque perspiciatis corrupti,
+          consectetur suscipit veniam consequatur. Voluptatum, unde libero sequi
+          officia rerum perspiciatis doloremque illum aperiam est. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Animi non fugiat nulla
+          quo quos, maxime debitis neque perspiciatis corrupti, consectetur
+          suscipit veniam consequatur. Voluptatum, unde libero sequi officia
+          rerum perspiciatis doloremque illum aperiam est.Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Animi non fugiat nulla quo quos,
+          maxime debitis neque perspiciatis corrupti, consectetur suscipit
+          veniam consequatur. Voluptatum, unde libero sequi officia rerum
+          perspiciatis doloremque illum aperiam est.
+        </div>
+      </section>
+
+      <br /><br />
+      <h2>Company Employees</h2>
+
+      <article class="grid">
+        <div class="article">
+          <div>
+            <img class="article-img" src="./2.png" alt="" />
+          </div>
+          <div class="article-text">
+            <div><h2>Title</h2></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                tempore perferendis, modi dolore accusantium veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="article">
+          <div>
+            <img class="article-img" src="./2.png" alt="" />
+          </div>
+          <div class="article-text">
+            <div><h2>Title</h2></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                tempore perferendis, modi dolore accusantium veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="article">
+          <div>
+            <img class="article-img" src="./2.png" alt="" />
+          </div>
+          <div class="article-text">
+            <div><h2>Title</h2></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                tempore perferendis, modi dolore accusantium veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="article">
+          <div>
+            <img class="article-img" src="./2.png" alt="" />
+          </div>
+          <div class="article-text">
+            <div><h2>Title</h2></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                tempore perferendis, modi dolore accusantium veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="article">
+          <div>
+            <img class="article-img" src="./2.png" alt="" />
+          </div>
+          <div class="article-text">
+            <div><h2>Title</h2></div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
+                tempore perferendis, modi dolore accusantium veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div><img src="./browse.svg" alt="browse"></div>
+
+    <footer id="footer" class="footer">
+      <div>Manav @ This is a Footer</div>
+    </footer>
+  </body>
+</html>

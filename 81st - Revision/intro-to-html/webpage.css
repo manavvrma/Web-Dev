@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  margin-left: 15px;
+}
+
+.navigation {
+  width: 250px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding: 60px 20px 20px 20px;
+}
+.grid {
+  display: flex;
+}
+
+.article {
+  width: 150px;
+  background-color: rgb(135, 135, 135);
+  padding: 20px;
+  border-radius: 9px;
+  color: white;
+  margin-right: 20px;
+}
+.article-img {
+  width: 145px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+new
+
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 20px; /* base font size → makes rem useful */
+      }
+
+      .header {
+        height: 3rem; /* ✅ rem for consistent height */
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 12%; /* ✅ % so it shrinks/grows with screen */
+        margin-left: 1rem; /* ✅ rem instead of px → scales with root font */
+      }
+
+      .navigation {
+        width: 20%; /* ✅ % → responsive nav size */
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem; /* ✅ rem for consistent text size */
+      }
+
+      main {
+        padding: 4rem 1.25rem 1.25rem 1.25rem;
+        /* ✅ top padding in rem (accounts for fixed header), sides in rem */
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap; /* ✅ makes it wrap on small screens */
+      }
+
+      .article {
+        width: 18%; /* ✅ % instead of px → responsive grid */
+        background-color: rgb(135, 135, 135);
+        padding: 1.25em; /* ✅ em so padding scales with text size */
+        border-radius: 0.5rem; /* ✅ rem → consistent rounded corners */
+        color: white;
+        margin-right: 1.25rem; /* ✅ rem instead of px */
+        margin-bottom: 1.25rem; /* ✅ add bottom spacing for wrapped rows */
+      }
+
+      .article-img {
+        width: 100%; /* ✅ responsive images inside article */
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem; /* ✅ rem */
+      }
+
+      .footer {
+        height: 8vh; /* ✅ vh → footer always ~8% of screen height */
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem; /* ✅ rem for scalable font */
+      }

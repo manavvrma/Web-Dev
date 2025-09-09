@@ -1,0 +1,27 @@
+* {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  caret-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial;
+  background-color: rgb(30, 30, 30);
+}

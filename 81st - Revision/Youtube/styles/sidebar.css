@@ -1,0 +1,25 @@
+.sidebar {
+  position: fixed;
+  top: 54px;
+  left: 0px;
+  bottom: 0px;
+  width: 75px;
+  background-color: white;
+  text-align: center;
+  font-size: 10.5px;
+  z-index: 101;
+}
+
+.sidebar-logo {
+  height: 24px;
+  padding: 7px;
+}
+
+.sidebar-button {
+  padding: 5px 0 15px 0;
+  cursor: pointer;
+}
+
+.sidebar-button:hover {
+  background-color: rgb(236, 236, 236);
+}

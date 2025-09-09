@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Music - Web Player</title>
+
+    <style>
+      * {
+        font-size: 62.5%;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        caret-color: transparent;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      div,
+      span {
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        cursor: default;
+      }
+      body {
+        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial;
+        background-color: rgb(30, 30, 30);
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(43, 43, 43);
+        height: 5.3rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 26.1rem;
+      }
+
+      .left-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28%;
+        margin: 0 0 0 1rem;
+      }
+
+      .icons {
+        display: flex;
+
+        color: rgb(104, 104, 104);
+      }
+
+      .icons svg {
+        width: 3rem;
+        height: 4rem;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      .icons .play-pause {
+        width: 3.5rem;
+        height: 4rem;
+      }
+
+      .middle-section {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin: 0 1rem 0 1rem;
+      }
+
+      .apple-note-button {
+        height: 4.3rem;
+        width: 4.8rem;
+        border: 1px solid rgb(36, 36, 36);
+        background-color: rgb(51, 51, 51);
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        cursor: pointer;
+        margin-right: -0.2rem;
+      }
+
+      .apple-note-icon {
+        height: 2.2rem;
+        width: 2.2rem;
+        color: rgb(68, 68, 68);
+      }
+
+      .music-player-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.3rem;
+        border: 1px solid rgb(53, 53, 53);
+        background-color: rgb(75, 75, 75);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        flex: 1;
+        /* min-width: 40rem; */
+      }
+
+      .apple-logo-icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        color: rgb(194, 194, 194);
+        display: flex;
+        margin-top: -0.4rem;
+      }
+
+      .right-section {
+        display: flex;
+        align-items: center;
+        margin-right: 1.8rem;
+      }
+      .volume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        gap: 0.7rem;
+        margin-right: 1rem;
+      }
+
+      .volume-logo {
+        height: 1.3rem;
+        width: 1.3rem;
+        color: gray;
+        display: flex;
+      }
+
+      .volume-container {
+        width: 7rem;
+        display: flex;
+      }
+
+      .volume-slider {
+        -webkit-appearance: none; /* reset browser style */
+        appearance: none;
+        width: 100%;
+        height: 0.3rem;
+        background: rgb(140, 140, 140); /* track color */
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.1rem;
+        height: 1.1rem;
+        background: rgb(224, 224, 224); /* ball color */
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+
+      .right-icons svg {
+        width: 1.8rem;
+        height: 1.8rem;
+
+        color: rgb(170, 170, 170);
+      }
+
+      .profile-picture {
+        height: 2.4rem;
+        width: 2.4rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+      }
+
+      .sidebar {
+        position: fixed;
+        background-color: rgb(37, 37, 37);
+        top: 0;
+        bottom: 0;
+        width: 26.1rem;
+        border-right: 1px solid rgb(61, 61, 61);
+      }
+
+      .logo {
+        color: white;
+        height: 2.3rem;
+        width: 8.3rem;
+        margin-bottom: 2.9rem;
+      }
+
+      .contents {
+        display: flex;
+        flex-direction: column;
+        padding: 1.8rem 3.2rem 2rem 3rem;
+      }
+
+      .search-box {
+        background-color: rgb(30, 30, 30);
+        height: 3.2rem;
+        border: 1px solid rgb(59, 59, 59);
+        font-size: 1.2rem;
+
+        color: rgb(91, 17, 17);
+        border-radius: 3px;
+      }
+
+      .search-box::placeholder {
+        color: gray;
+        padding-left: 1rem;
+      }
+
+      .search-box::active {
+        border: 1px solid #fa586a;
+      }
+
+      .list1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        list-style-type: none;
+        color: rgb(255, 255, 255);
+        font-size: 2.4rem;
+        padding: 0 0 2rem 0;
+        font-weight: 500;
+        width: 100%;
+      }
+
+      .list1 li {
+        display: flex;
+        padding: 0.5rem 0 0.6rem 0;
+        cursor: pointer;
+        align-items: center;
+      }
+
+      .list1 li:hover {
+        background-color: rgb(62, 62, 62);
+
+        border-radius: 5px;
+      }
+
+      .sidebar-sections {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding-top: 2rem;
+      }
+
+      .section-heading {
+        font-size: 1rem;
+        color: rgb(182, 182, 182);
+      }
+
+      .sidebar-icons {
+        color: #fa586a;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin: 0 0.7rem 0 0.1rem;
+      }
+
+      main {
+        padding: 7.6rem 3.8rem 100rem 30rem;
+      }
+      .heading {
+        font-size: 3.4rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.92);
+      }
+      .subheading {
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-top: 3rem;
+      }
+
+      .card-list {
+        display: flex;
+        gap: 2rem;
+        align-items: stretch;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-heading {
+        color: rgba(180, 180, 180, 0.92);
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.7rem;
+        height: 100%;
+        min-width: 20rem;
+        flex: 1 1 calc(25% - 2rem);
+      }
+
+      .card-image {
+        width: 100%;
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+        aspect-ratio: 1/1;
+      }
+      .card-title-card {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.92);
+        padding: 0px;
+        align-items: center;
+        width: 100%;
+        border-bottom-left-radius: 13px;
+        border-bottom-right-radius: 13px;
+        flex: 1;
+      }
+      .card-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 0.8vw 1rem;
+      }
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        .middle-section {
+          width: 100%;
+        }
+
+        .profile-picture {
+          margin-left: -4.3rem !important;
+        }
+
+        .right-section {
+          margin: 0;
+        }
+
+        .left-section,
+        .volume,
+        .right-icons {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="left-section">
+        <div class="icons">
+          <svg>
+            <use href="icons.svg#icon-shuffle"></use>
+          </svg>
+          <svg>
+            <use href="icons.svg#icon-previous"></use>
+          </svg>
+          <svg class="play-pause">
+            <use href="icons.svg#icon-play"></use>
+          </svg>
+          <svg>
+            <use href="icons.svg#icon-next"></use>
+          </svg>
+          <svg>
+            <use href="icons.svg#icon-repeat"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="middle-section">
+        <button class="apple-note-button">
+          <svg class="apple-note-icon">
+            <use href="icons.svg#apple-music-note"></use>
+          </svg>
+        </button>
+        <div class="music-player-title">
+          <svg class="apple-logo-icon">
+            <use href="icons.svg#apple-logo"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="volume">
+        <div>
+          <svg class="volume-logo">
+            <use href="icons.svg#icon-volume"></use>
+          </svg>
+        </div>
+        <div class="volume-container">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="volume-slider"
+          />
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="right-icons">
+          <svg>
+            <use href="icons.svg#icon-lyrics"></use>
+          </svg>
+
+          <svg>
+            <use href="icons.svg#icon-up-next"></use>
+          </svg>
+        </div>
+        <img
+          class="profile-picture"
+          src="https://is1-ssl.mzstatic.com/image/thumb/U2mEq38QH_bgOecBahcXdA/500x500cc.jpg"
+          alt="profile picture"
+        />
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <div class="contents">
+        <svg class="logo">
+          <use href="icons.svg#apple-music-logo"></use>
+        </svg>
+        <input class="search-box" type="search" placeholder="Search" />
+        <div class="sidebar-sections">
+          <ul class="list1">
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Home
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >New
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Radio
+            </li>
+          </ul>
+          <h4 class="section-heading">Library</h4>
+          <ul class="list1">
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use>
+              </svg>
+              Recently Added
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use>
+              </svg>
+              Artists
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Albums
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Songs
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Made for You
+            </li>
+          </ul>
+          <h4 class="section-heading">Playlists</h4>
+          <ul class="list1">
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >All Playlists
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Favourite Songs
+            </li>
+
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Heavy Rotation
+            </li>
+            <li>
+              <svg class="sidebar-icons">
+                <use href="icons.svg#icon-sidebar"></use></svg
+              >Chill
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="heading">Home</div>
+      <div class="subheading">Top Picks for You</div>
+
+      <div class="card-list">
+        <article>
+          <div class="card-heading">Made for You</div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/18/d3/b1/18d3b126-0a91-b112-e2fd-e8b6dcb9c238/Jobdefb94c2-6e80-4206-a226-29765632d1af-107559236-PreviewImage_preview_image_nonvideo_sdr-Time1601334010442.png/600x600bb.webp"
+              alt=""
+            />
+            <div
+              class="card-title-card"
+              style="background-color: rgba(0, 255, 255, 0.644)"
+            >
+              <div class="card-title">Relax</div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="card-heading">Made for You</div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/26/af/0d/26af0d73-cb40-75bc-6795-5c2b3d7dd9e8/Job5e07fb0a-a15a-4040-bcd9-e6e092a601df-107558921-PreviewImage_preview_image_nonvideo_sdr-Time1601333570914.png/600x600bb.webp"
+              alt=""
+            />
+            <div
+              class="card-title-card"
+              style="background-color: rgba(255, 192, 203, 0.959)"
+            >
+              <div class="card-title">
+                Talwiinder, TRYX, Trevor Daniel and more
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="card-heading">Made for You</div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/10/59/41/10594149-3bd7-57a7-aa9e-cb36a15e72c0/Job7e192bee-237c-490b-806e-71d37294e9ee-160026724-PreviewImage_preview_image_nonvideo_sdr-Time1702499232526.png/600x600bb.webp"
+              alt=""
+            />
+            <div
+              class="card-title-card"
+              style="background-color: rgba(255, 166, 0, 0.918)"
+            >
+              <div class="card-title">
+                Talwiinder, TRYX, Trevor Daniel, Travis Scott, Karun, Lil Peep
+                and more
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="card-heading">Made for You</div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/ce/29/03/ce29031d-112d-f099-c1ef-4550e65871c6/Jobcfe7d6fb-b86e-49f3-851f-20bb5d99b8a6-107559482-PreviewImage_preview_image_nonvideo_sdr-Time1601338643510.png/600x600bb.webp"
+              alt=""
+            />
+            <div
+              class="card-title-card"
+              style="background-color: rgba(147, 74, 241, 0.904)"
+            >
+              <div class="card-title">
+                Talwiinder, TRYX, Trevor Daniel, Travis Scott, Karun, Lil Peep
+                and more
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- <article>
+          <div class="card-heading">Made for You</div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/bf/ab/6e/bfab6e99-e4e4-2015-667d-1b229285997c/Job65ac28d0-f015-41a1-b1b3-0bc090882b8d-173223751-PreviewImage_preview_image_nonvideo_sdr-Time1722982803922.png/600x600bb.webp"
+              alt=""
+            />
+            <div
+              class="card-title-card"
+              style="background-color: rgba(74, 208, 241, 0.507)"
+            >
+              <div class="card-title">
+                Travis Scott, Karun, Lil Peep and more
+              </div>
+            </div>
+          </div>
+        </article> -->
+      </div>
+
+      <div>
+        <div class="subheading">Recently Played</div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

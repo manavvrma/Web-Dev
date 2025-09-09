@@ -1,0 +1,212 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manav's Portfolio</title>
+  </head>
+  <body>
+    <h1>Manav's Portfolio</h1>
+
+    <ul>
+      <li><a href="./Highlights.html">Highlights</a></li>
+      <li><a href="./ContactMe.html">Contact Me</a></li>
+      <li><a href="./AboutMe.html">About</a></li>
+    </ul>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Profile - HTML Only</title>
+  </head>
+  <body>
+    <!-- Page Header -->
+    <header>
+      <h1>👋 Hi, I'm Your Name</h1>
+      <!-- Simple in-page navigation using anchor links -->
+      <nav>
+        <a href="#about">About</a> | <a href="#highlights">Highlights</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+      <hr />
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <!-- Replace the src with a local image file sitting next to this HTML, e.g., profile.jpg -->
+      <img src="./2.png" alt="My profile photo" width="160" height="160" />
+      <p>
+        I'm learning web development. This page is built using only HTML to
+        practice structure, links, images, lists, tables, and forms—no CSS or
+        JavaScript!
+      </p>
+
+      <!-- A definition list is great for small facts -->
+      <h3>Quick Facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Your City, Country</dd>
+        <dt>Learning</dt>
+        <dd>HTML, CSS, JavaScript</dd>
+        <dt>Goal</dt>
+        <dd>Build real-world projects and get job-ready</dd>
+      </dl>
+      <p><a href="#top">Back to top ↑</a></p>
+      <hr />
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights">
+      <h2>Highlights</h2>
+
+      <h3>What I enjoy</h3>
+      <!-- Unordered list -->
+      <ul>
+        <li>Building small web pages</li>
+        <li>Learning by doing</li>
+        <li>Documenting my progress</li>
+      </ul>
+
+      <h3>Daily Learning Plan</h3>
+      <!-- Ordered list -->
+      <ol>
+        <li>Review yesterday’s notes</li>
+        <li>Learn one new HTML tag</li>
+        <li>Practice by adding a new section</li>
+        <li>Write a short reflection</li>
+      </ol>
+
+      <h3>Skill Snapshot</h3>
+      <!-- Simple table (no CSS) -->
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption>
+          Current Skills (HTML-only table)
+        </caption>
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Beginner</td>
+            <td>Learning structure & semantic tags</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Starting Soon</td>
+            <td>Will style this page later</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Planning</td>
+            <td>To add interactivity</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="#top">Back to top ↑</a></p>
+      <hr />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>Digital Postcard</h3>
+        <p>
+          A single HTML file that shows a travel photo, a short message, and a
+          link to a map location. Great for practicing images and links.
+        </p>
+        <p>
+          Link:
+          <a href="https://example.com" target="_blank" rel="noopener"
+            >See a placeholder</a
+          >
+        </p>
+      </article>
+
+      <article>
+        <h3>Reading List</h3>
+        <p>
+          A page with a list of articles you want to read. Use an ordered list
+          and include the source links.
+        </p>
+      </article>
+
+      <!-- Download link example -->
+      <p>
+        <a href="my-resume.pdf" download>Download my resume (PDF)</a>
+        <!-- Put a file named my-resume.pdf next to this HTML to make this work -->
+      </p>
+      <p><a href="#top">Back to top ↑</a></p>
+      <hr />
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <!-- This form uses a mailto action; it opens the user's email client -->
+      <form
+        action="mailto:yourname@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <p>
+          <label for="name">Your Name:</label><br />
+          <input id="name" name="name" type="text" required />
+        </p>
+        <p>
+          <label for="email">Your Email:</label><br />
+          <input id="email" name="email" type="email" required />
+        </p>
+        <p>
+          <label for="msg">Message:</label><br />
+          <textarea
+            id="msg"
+            name="message"
+            rows="5"
+            cols="30"
+            required
+          ></textarea>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <!-- External links -->
+      <h3>Find me online</h3>
+      <ul>
+        <li>
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <p><a href="#top">Back to top ↑</a></p>
+      <hr />
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; <span>2025</span> Your Name. Built with only HTML.</p>
+      <!-- Small print using <small> -->
+      <p><small>Made as a beginner practice project.</small></p>
+    </footer>
+  </body>
+</html>

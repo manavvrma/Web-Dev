@@ -1,0 +1,64 @@
+main {
+  padding: 7.6rem 3.8rem 100rem 30rem;
+}
+.heading {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+.subheading {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-top: 3rem;
+}
+
+.card-list {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-heading {
+  color: rgba(180, 180, 180, 0.92);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.7rem;
+  height: 100%;
+  min-width: 20rem;
+}
+
+.card-image {
+  width: 100%;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  aspect-ratio: 1/1;
+}
+.card-title-card {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 0px;
+  align-items: center;
+  width: 100%;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  flex: 1;
+}
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.8vw 1rem;
+}
