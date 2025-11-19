@@ -621,3 +621,73 @@ function abcde(v) {
 let val = abcde(8);
 
 console.log(val); //12
+
+// first class functions functions can be used as values for functions
+
+// high order funcition - check notes
+
+// pure vs impure versions
+
+// pure - pure function se baahr ki value nahi badalti
+
+let val2 = 12;
+
+function func1() {
+  console.log("hello");
+}
+
+// impure - opposite
+function func2() {
+  val2++; //this changes value of val2
+}
+
+//closures - function which return another function and use variables of the parent function
+
+function func3() {
+  let a = 15;
+  return function () {
+    console.log(a);
+  };
+}
+
+//lexical scoping - a  only accessible in func4, b only accessible in func5, like this
+
+function func4() {
+  let a = 15;
+  function func5() {
+    let b = 16;
+    function func6() {
+      let c = 17;
+    }
+  }
+}
+
+//IIFE - immediately invoked
+
+(function () {})();
+
+// hoisting in function happens with no error but if we make function expression that new variable will not work in hoisting
+
+//practice functio concepts
+
+function func9(a, b, c, d) {
+  console.log(a, b, c, d);
+}
+func9(1, 2, 3); // d will be undefined
+
+let a = function () {
+  return 15;
+};
+
+console.log(a());
+
+// practive
+
+function one(val) {
+  //higher order functuion
+  val();
+}
+
+one(function () {
+  console.log("hey");
+});
