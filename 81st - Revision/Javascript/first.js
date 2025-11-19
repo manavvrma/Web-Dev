@@ -424,6 +424,8 @@ function check(checkprop) {
 
 console.log(check("dob"));
 
+// SHERIYANS JS COURSE
+
 // var let const
 
 // console.log(a);
@@ -691,3 +693,17 @@ function one(val) {
 one(function () {
   console.log("hey");
 });
+
+// closyure
+let count = 1;
+function outer() {
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+
+counter();
+counter();
