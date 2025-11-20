@@ -770,3 +770,58 @@ console.log(pure1(5));
 })();
 
 // console.log(password);
+
+// Arrays
+
+// fat arrow function mai hoisting dont work
+
+let arr = [1, 2, 3, 4];
+
+let marks = [12, 43, 68, 44, 56];
+
+console.log(marks[3]);
+
+let arr1 = [];
+
+console.log(typeof arr);
+
+marks[2] = 45;
+console.log(marks);
+
+let arr3 = [1, 2, 3, 4, 5];
+arr3.push(23); //method
+console.log(arr3);
+
+// arr3.push(34);
+// console.log(arr3);
+// arr3.push(56);
+// console.log(arr3);
+// arr3.pop();
+// console.log(arr3);
+// arr3.shift();
+// console.log(arr3);
+// arr3.shift();
+// console.log(arr3);
+// arr3.unshift(1, 2, 3, 4, 5);
+// console.log(arr3);
+
+// arr3.reverse();
+// console.log(arr3);
+// arr3.splice(4, 9);
+// console.log(arr3);
+// let arr33 = arr3.slice(0, 3);
+// console.log(arr33);
+
+//sort
+
+let marks1 = [12, 43, 68, 44, 56, 67, 90];
+
+let ascending = [...marks1].sort(function (a, b) {
+  return a - b;
+});
+
+let descending = marks1.sort(function (a, b) {
+  return b - a;
+});
+console.log(ascending);
+console.log(descending);
