@@ -581,6 +581,8 @@ for (let i = 1; i <= val1; i++) {
   ww;
 }
 
+//functions start here
+
 // fat arrw functionl
 let n = () => {};
 
