@@ -709,3 +709,64 @@ const counter = outer();
 
 counter();
 counter();
+
+// Practice:
+
+// Write a BMI calculator
+
+function bmi(height, weight) {
+  let result = weight / height ** 2;
+  return result;
+}
+
+console.log(bmi(1.75, 73).toFixed(2));
+
+// Create a reusable discount calculator (HOF)
+
+function discount(val) {
+  return function (price) {
+    return price - price * (val / 100);
+  };
+}
+
+let ten = discount(10);
+let twenty = discount(20);
+
+console.log(ten(1200));
+
+// Build a counter using closue
+
+function counter() {
+  let count = 0;
+  return function () {
+    count += 1;
+    return count;
+  };
+}
+
+let count1 = counter();
+let count2 = counter();
+console.log(count1()); // closure instance
+console.log(count1());
+
+console.log(count2());
+console.log(count2());
+
+// Create a pure function to transform a value
+
+// my notes pure function - the varable outside is not chnaged from the action of the function
+
+function pure1(val) {
+  return val * val;
+}
+
+console.log(pure1(5));
+
+// Use IIFE to isolate variables
+
+(function atm() {
+  const password = "secret";
+  console.log(password);
+})();
+
+// console.log(password);
